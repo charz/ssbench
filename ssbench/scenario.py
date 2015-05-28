@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2013 SwiftStack, Inc.
+# Copyright (c) 2012-2015 SwiftStack, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -63,7 +63,7 @@ class Scenario(object):
         else:
             self.user_count = self._scenario_data['user_count']
         if self.user_count < 1:
-            raise ValueError('user_count must be > 1')
+            raise ValueError('user_count must be >= 1')
 
         # Command-line-specified values trump values in the scenario, and
         # within each of those levels, run_seconds trumps operation_count.
